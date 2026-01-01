@@ -1,0 +1,158 @@
+format = """\
+$directory
+$cmd_duration\
+$hostname\
+$localip\
+$shlvl\
+$shell\
+$env_var\
+$jobs\
+$sudo\
+$username\
+$character"""
+
+right_format = """
+$git_branch\
+$git_commit\
+$git_state\
+$memory_usage\
+$os\
+"""
+
+[fill]
+symbol = ' '
+
+# Replace the '❯' symbol in the prompt with '➜'
+#[character] # The name of the module we are configuring is 'character'
+#success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+
+[c]
+symbol = " "
+format = '\[[$symbol($version(-$name))]($style)\]'
+
+[cmake]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[cmd_duration]
+format = '\[[⏱ $duration]($style)\]'
+
+[conda]
+symbol = " "
+format = '\[[$symbol$environment]($style)\]'
+
+[directory]
+truncation_symbol = ".../"
+read_only = '🔒'
+truncation_length = 10
+
+[docker_context]
+symbol = " "
+format = '\[[$symbol$context]($style)\]'
+
+[git_branch]
+symbol = " "
+format = '\[[$symbol$branch]($style)\]'
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style))'
+
+[git_commit]
+tag_symbol = '  '
+
+[hostname]
+ssh_symbol = " "
+
+[memory_usage]
+threshold = 1
+symbol = "󰍛 "
+format = '\[$symbol[$ram_pct]($style)\]'
+disabled = false
+
+
+[os]
+format = '[$symbol]($style)'
+disabled = false
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
+
+[perl]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[php]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[python]
+symbol = " "
+format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
+
+[ruby]
+symbol = " "
+format = '\[[$symbol($version)]($style)\]'
+
+[rust]
+symbol = "󱘗 "
+format = '\[[$symbol($version)]($style)\]'
+
+[sudo]
+style = "bold blue"
+symbol = '🧙'
+disabled = false
+format = '\[[$symbol]($style)\]'
+
+[time]
+format = '\[[$time]($style)\]'
+
+[username]
+show_always = true
+disabled = false
+format = '[$user]($style)'
+
+
